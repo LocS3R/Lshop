@@ -113,8 +113,9 @@
 /* Header notification */
 .header__notify {
   position: absolute;
+  margin-top: 8px;
   top: 125%;
-  right: 0;
+  right: -0.6rem;
   width: 400px;
   border: 1px solid #d3d3d3;
   background-color: var(--white-color);
@@ -122,6 +123,25 @@
   display: none;
   transform-origin: calc(100% - 20px) top; /*Chinh tam cua tranfotm*/
   animation: notifyGrowth ease-in-out 0.25s;
+}
+.header__notify::before {
+  content: "";
+  border-width: 20px 30px;
+  border-style: solid;
+  border-color: transparent transparent var(--white-color) transparent;
+  position: absolute;
+  right: 0px;
+  top: -33px;
+}
+.header__notify::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  /* background-color: #757575; */
+  right: 0;
+  top: -15px;
 }
 @keyframes notifyGrowth {
   from {
